@@ -541,6 +541,26 @@
         font-size: 28px;
       }
     }
+    .bossWrap-m {
+      display: none;
+    }
+    .bossWrap {
+        display: block;
+      }
+    @media (max-width: 768px) {
+      .bossWrap {
+        display: none;
+      }
+      .bossWrap-m {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        font-size: 0;
+      }
+      .bossWrap-m .bg {
+        width: 100%;
+      }
+    }
   </style>
 </head>
 
@@ -651,6 +671,42 @@
     </div>
 
   </div>
+
+  <div class="bossWrap-m">
+    <div class="bossWrap-m__cont1">
+      <img src="https://cdn.imweb.me/upload/S202103307cf83b054c1d4/7b3adee7ade1e.png" alt="" class="bg">
+    </div>
+    <div class="bossWrap-m__cont2">
+      <img src="https://cdn.imweb.me/upload/S202103307cf83b054c1d4/aeb9b6f6b35be.png" alt="" class="bg">
+    </div>
+    <div class="bossWrap-m__cont3">
+      <img src="https://cdn.imweb.me/upload/S202103307cf83b054c1d4/ab2fb8817790a.png" alt="" class="bg">
+    </div>
+    <div class="bossWrap-m__cont4">
+      <img src="https://cdn.imweb.me/upload/S202103307cf83b054c1d4/bc7d3a6632cc4.png" alt="" class="bg">
+    </div>
+    <div class="bossWrap-m__cont5">
+      <img src="https://cdn.imweb.me/upload/S202103307cf83b054c1d4/b4d0bb4bf342b.png" alt="" class="bg">
+      <div class="youtube">
+        <iframe src="https://www.youtube.com/embed/6Es497dPsZI" title="카페계의 다이소! 다양한 메뉴라인과 홀+배달+포장 판매 최적화 시스템 &#39;카페보스&#39;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <img src="https://cdn.imweb.me/upload/S202103307cf83b054c1d4/7f3c2ae4a9ade.png" alt="" class="img2">
+        <img src="https://cdn.imweb.me/upload/S202103307cf83b054c1d4/6d74adb460211.png" alt="" class="img3">
+      </div>
+    </div>
+    <div class="bossWrap-m__cont6">
+      <div class="cont swiper"></div>
+    </div>
+    <div class="bossWrap-m__cont7">
+      <img src="https://cdn.imweb.me/upload/S202103307cf83b054c1d4/1c504a2b399c7.png" alt="" class="bg">
+      <div class="cont swiper"></div>
+    </div>
+    <div class="bossWrap-m__cont8">
+      <img src="https://cdn.imweb.me/upload/S202103307cf83b054c1d4/4b67f006a88ea.png" alt="" class="bg">
+    </div>
+    <div class="bossWrap-m__cont9">
+      <img src="https://cdn.imweb.me/upload/S202103307cf83b054c1d4/93b437d061a4a.png" alt="" class="bg">
+    </div>
+  </div>
   <div doz_type="widget" id="w2023120450514e69634c5">
     <div class="_widget_data " data-widget-name="입력폼" data-widget-type="form" data-widget-anim="none" data-widget-anim-duration="0.7" data-widget-anim-delay="0" data-widget-parent-is-mobile="N">
       <div class="form-widget widget  _form-widget"><!--deadline 붙으면 deadline-bar,deadline-opacity block상태-->
@@ -688,10 +744,6 @@
       </div>
     </div>
   </div>
-
-
-
-
   <div doz_type="widget" id="w20231206ce300895350dc">
     <div class="_widget_data " data-widget-name="입력폼" data-widget-type="form" data-widget-anim="none" data-widget-anim-duration="0.7" data-widget-anim-delay="0" data-widget-parent-is-mobile="N">
       <div class="form-widget widget  _form-widget"><!--deadline 붙으면 deadline-bar,deadline-opacity block상태-->
@@ -732,6 +784,7 @@
 
     </div>
   </div>
+
   <script>
     var swiper = new Swiper(".mySwiper", {
       spaceBetween: 0,
@@ -757,7 +810,14 @@
     $(window).scroll(function () {
       var windowHeight = $(window).height();
       var scrollBottom = $(window).scrollTop() + windowHeight;
-      var targetElement = $('.bossWrap__cont8');
+      var targetElement;
+
+      if ($(window).width() > 768) {
+          targetElement = $('.bossWrap__cont8');
+      } else {
+          targetElement = $('.bossWrap-m__cont8');
+      }
+
       var toggleElement = $('#w2023120450514e69634c5');
 
       if (scrollBottom >= targetElement.offset().top + targetElement.outerHeight()) {
@@ -766,14 +826,36 @@
         toggleElement.addClass('fixed');
       }
     });
+    $(window).resize(function() {
+        if ($(window).width() > 768) {
+          addImages();
+        } else {
+          addImagesMo();
+        }
+    });
     $(function () {
+      if ($(window).width() > 768) {
+          addImages();
+        } else {
+          addImagesMo();
+        }
+    });
+
+    function addImages() {
       var imageSrc1 = 'https://cdn.imweb.me/upload/S202103307cf83b054c1d4/2f6b23d0b82be.png';
       var imageSrc2 = 'https://cdn.imweb.me/upload/S202103307cf83b054c1d4/10ac8911983e1.png';
       var frontImage = '<img src="' + imageSrc1 + '" alt="Front Image" class="bannerImg1">';
       var backImage = '<img src="' + imageSrc2 + '" alt="Back Image" class="bannerImg2">';
+      $('#w2023120450514e69634c5').find('.bannerImg1, .bannerImg2').remove();
       $('#w2023120450514e69634c5').prepend(frontImage);
       $('#w2023120450514e69634c5').append(backImage);
-    });
+    }
+    function addImagesMo() {
+      var imageSrc1 = 'https://cdn.imweb.me/upload/S202103307cf83b054c1d4/83a49a31b0f9a.png';
+      var frontImage = '<img src="' + imageSrc1 + '" alt="Front Image" class="bannerImg1">';      
+      $('#w2023120450514e69634c5').find('.bannerImg1, .bannerImg2').remove();
+      $('#w2023120450514e69634c5').prepend(frontImage);
+    }
   </script>
 </body>
 
