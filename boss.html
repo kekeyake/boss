@@ -373,6 +373,17 @@
       height: 82px;
       font-size: 0;
       background: url(https://cdn.imweb.me/upload/S202103307cf83b054c1d4/353d3e1fadc91.png) no-repeat 50% / cover;
+      animation: blink 0.5s ease-in-out infinite alternate;
+    }
+
+    @keyframes blink {
+      0% {
+        opacity: 0.1;
+      }
+
+      100% {
+        opacity: 1;
+      }
     }
 
     #w2023120450514e69634c5 #addFormw2023120450514e69634c5 .control-label {
@@ -704,6 +715,10 @@
         flex: 1;
       }
 
+      #w2023120450514e69634c5 .bannerImg1 img {
+        width: 100%;
+      }
+
       #w2023120450514e69634c5 ._widget_data {
         width: 55%;
       }
@@ -978,7 +993,7 @@
             <div class="swiper-slide"><img src="https://cdn.imweb.me/upload/S202103307cf83b054c1d4/15403abbda9d8.png" alt=""></div>
             <div class="swiper-slide"><img src="https://cdn.imweb.me/upload/S202103307cf83b054c1d4/a192027888bcd.png" alt=""></div>
             <div class="swiper-slide"><img src="https://cdn.imweb.me/upload/S202103307cf83b054c1d4/6137edb7dce46.png" alt=""></div>
-            <div class="swiper-slide"><img src="https://cdn.imweb.me/upload/S202103307cf83b054c1d4/5caa194f74e77.png" alt=""></div>
+
             <div class="swiper-slide"><img src="https://cdn.imweb.me/upload/S202103307cf83b054c1d4/4a4a0af438fc7.png" alt=""></div>
             <div class="swiper-slide"><img src="https://cdn.imweb.me/upload/S202103307cf83b054c1d4/6bf965216dd55.png" alt=""></div>
             <div class="swiper-slide"><img src="https://cdn.imweb.me/upload/S202103307cf83b054c1d4/2e20707f2353b.png" alt=""></div>
@@ -1057,7 +1072,6 @@
           <div class="swiper-slide"><img src="https://cdn.imweb.me/upload/S202103307cf83b054c1d4/15403abbda9d8.png" alt=""></div>
           <div class="swiper-slide"><img src="https://cdn.imweb.me/upload/S202103307cf83b054c1d4/a192027888bcd.png" alt=""></div>
           <div class="swiper-slide"><img src="https://cdn.imweb.me/upload/S202103307cf83b054c1d4/6137edb7dce46.png" alt=""></div>
-          <div class="swiper-slide"><img src="https://cdn.imweb.me/upload/S202103307cf83b054c1d4/5caa194f74e77.png" alt=""></div>
           <div class="swiper-slide"><img src="https://cdn.imweb.me/upload/S202103307cf83b054c1d4/4a4a0af438fc7.png" alt=""></div>
           <div class="swiper-slide"><img src="https://cdn.imweb.me/upload/S202103307cf83b054c1d4/6bf965216dd55.png" alt=""></div>
           <div class="swiper-slide"><img src="https://cdn.imweb.me/upload/S202103307cf83b054c1d4/2e20707f2353b.png" alt=""></div>
@@ -1172,7 +1186,7 @@
       // centeredSlides: true,
       loop: true,
       autoplay: {
-        delay: 5000,
+        delay: 4000,
       },
       navigation: {
         nextEl: ".mySwiper .swiper-button-next",
@@ -1187,7 +1201,7 @@
       centeredSlides: true,
       loop: true,
       autoplay: {
-        delay: 5000,
+        delay: 4000,
       },
       observer: true,
       observeParents: true,
@@ -1198,7 +1212,7 @@
       slidesPerView: 'auto',
       loop: true,
       autoplay: {
-        delay: 5000,
+        delay: 4000,
       },
       navigation: {
         nextEl: ".mySwiperMo .swiper-button-next",
@@ -1212,7 +1226,7 @@
       centeredSlides: true,
       loop: true,
       autoplay: {
-        delay: 5000,
+        delay: 4000,
       },
       observer: true,
       observeParents: true,
@@ -1272,7 +1286,7 @@
     }
     function addImagesMo() {
       var imageSrc1 = 'https://cdn.imweb.me/upload/S202103307cf83b054c1d4/83a49a31b0f9a.png';
-      var frontImage = '<img src="' + imageSrc1 + '" alt="Front Image" class="bannerImg1">';
+      var frontImage = '<a href="tel:1670-9405" class="bannerImg1"><img src="' + imageSrc1 + '" alt="Front Image"></a>';
       $('#w2023120450514e69634c5').find('.bannerImg1, .bannerImg2').remove();
       $('#w2023120450514e69634c5').prepend(frontImage);
     }
