@@ -372,7 +372,10 @@
       width: 149px;
       height: 82px;
       font-size: 0;
-      background: url(https://cdn.imweb.me/upload/S202103307cf83b054c1d4/353d3e1fadc91.png) no-repeat 50% / cover;
+      background: url(https://cdn.imweb.me/upload/S202103307cf83b054c1d4/353d3e1fadc91.png) no-repeat 50% / cover;      
+      animation: blink 0.5s ease-in-out infinite alternate;
+    }
+    .blink {
       animation: blink 0.5s ease-in-out infinite alternate;
     }
 
@@ -1131,7 +1134,7 @@
             </div>
           </form>
           <div class="form text-center">
-            <a href="javascript:;" class="btn btn-primary _input_form_submit" onclick="SITE_FORM.confirmInputForm('w2023120450514e69634c5','N');">
+            <a href="javascript:;" class="btn btn-primary _input_form_submit blink" onclick="SITE_FORM.confirmInputForm('w2023120450514e69634c5','N');">
               문의하기</a>
           </div>
         </div>
@@ -1169,7 +1172,7 @@
             </div>
           </form>
           <div class="form text-center">
-            <a href="javascript:;" class="btn btn-primary _input_form_submit" onclick="SITE_FORM.confirmInputForm('w20231206ce300895350dc','N');">
+            <a href="javascript:;" class="btn btn-primary _input_form_submit blink" onclick="SITE_FORM.confirmInputForm('w20231206ce300895350dc','N');">
               문의하기</a>
           </div>
         </div>
@@ -1286,7 +1289,7 @@
     }
     function addImagesMo() {
       var imageSrc1 = 'https://cdn.imweb.me/upload/S202103307cf83b054c1d4/83a49a31b0f9a.png';
-      var frontImage = '<a href="tel:1670-9405" class="bannerImg1"><img src="' + imageSrc1 + '" alt="Front Image"></a>';
+      var frontImage = '<a href="tel:1670-9405" class="bannerImg1 blink"><img src="' + imageSrc1 + '" alt="Front Image"></a>';
       $('#w2023120450514e69634c5').find('.bannerImg1, .bannerImg2').remove();
       $('#w2023120450514e69634c5').prepend(frontImage);
     }
