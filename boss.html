@@ -9,7 +9,7 @@
   <script src="https://vendor-cdn.imweb.me/js/jquery.js?1627517460"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/wowjs@1.1.3/dist/wow.min.js"></script>
-  <link href="https://cdn.jsdelivr.net/npm/wowjs@1.1.3/css/libs/animate.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/wowjs@1.1.3/css/libs/animate.min.css" rel="stylesheet">  
 
   <style>
     #s20231128cf14d6d6d3a70.extend_section main {
@@ -41,7 +41,7 @@
     .bossWrap__top .cont {
       height: 100%;
       margin: 0 100px;
-      position: relative;
+      position: relative;      
     }
 
     .bossWrap__top .cont .img {
@@ -225,17 +225,6 @@
       max-width: 828px;
     }
 
-    .bossWrap__cont5 .youtube {
-      margin: 90px auto 0;
-      ;
-      max-width: 1012px;
-      width: 100%;
-      height: 0;
-      padding-bottom: 56.25%;
-      /* 9/16 = 0.5625 */
-      position: relative;
-    }
-
     .bossWrap__cont5 .img2 {
       position: absolute;
       left: 0;
@@ -250,6 +239,46 @@
       transform: translateX(110%);
     }
 
+    .bossWrap__cont5 .youtuveSwiper {      
+      /* 9/16 = 0.5625 */
+      position: relative;
+    }
+    .bossWrap__cont5 .youtube {
+      position: relative;
+      margin: 90px auto 0;
+      max-width: 1012px;
+    }
+    .bossWrap__cont5 .swiper-slide {
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding-bottom: 56.25%;
+    }
+    .bossWrap__cont5 .swiper-button-next {
+      right: -5%;
+      width: 102px;
+      height: 102px;
+      color: #c7c7c7;
+      border-radius: 50%;
+      background-color: #444;
+      margin-top: -50px;
+    }
+
+    .bossWrap__cont5 .swiper-button-prev {
+      left: -5%;
+      width: 102px;
+      height: 102px;
+      color: #c7c7c7;
+      border-radius: 50%;
+      background-color: #444;
+      margin-top: -50px;
+    }
+    @media (min-width: 1200px) {
+      .bossWrap__cont5 .swiper-slide {
+        padding-bottom: calc(1012px * 0.5625);
+        height: auto;
+      }
+    }
     .bossWrap__cont5 iframe {
       position: absolute;
       width: 100%;
@@ -258,12 +287,7 @@
       top: 0;
     }
 
-    @media (min-width: 1200px) {
-      .bossWrap__cont5 .youtube {
-        padding-bottom: calc(1012px * 0.5625);
-        height: auto;
-      }
-    }
+    
 
     .bossWrap__cont8 {
       background: url(https://cdn.imweb.me/upload/S202103307cf83b054c1d4/8f7ed70185dd1.png) no-repeat 50% / cover;
@@ -426,7 +450,6 @@
       height: 82px;
       font-size: 0;
       background: url(https://cdn.imweb.me/upload/S202103307cf83b054c1d4/353d3e1fadc91.png) no-repeat 50% / cover;      
-      animation: blink 0.5s ease-in-out infinite alternate;
     }
     .blink {
       animation: blink 0.5s ease-in-out infinite alternate;
@@ -514,7 +537,7 @@
     }
 
     #w2023120450514e69634c5 #privacy .checkbox span::before {
-      top: -4px;
+      top: -4px;      
     }
 
     #w2023120450514e69634c5 .bannerImg1 {
@@ -754,11 +777,14 @@
       }
 
       #w2023120450514e69634c5 #privacy .checkbox span {
-        font-size: 1.5vw
+        font-size: 1.5vw;
+        padding-left: 4vw;
       }
 
       #w2023120450514e69634c5 #privacy .checkbox span::before {
         top: -4px;
+        width: 3vw;
+        height: 3vw;
       }
 
       #w2023120450514e69634c5 #privacy label {
@@ -769,6 +795,11 @@
       #w2023120450514e69634c5 .bannerImg1 {
         margin-right: 0;
         flex: 1;
+      }
+      #w2023120450514e69634c5 .bannerImg1.mo {
+        display: flex;
+        flex-direction: column;
+        gap: 1vw;
       }
 
       #w2023120450514e69634c5 .bannerImg1 img {
@@ -935,13 +966,54 @@
     }
 
     .bossWrap-m__cont5 .youtube {
-      margin: 0 auto;
-      width: 85%;
+      position: relative;
+      margin: 0 auto;    
+      width: 85%;  
+    }
+
+    .bossWrap-m__cont5 .youtuveSwiper2 {      
+      /* 9/16 = 0.5625 */
+      position: relative;      
+    }
+
+    .bossWrap-m__cont5 .swiper-slide {
+      position: relative;      
       height: 0;
       padding-bottom: 47.8125%;
-      /* 9/16 = 0.5625 */
-      position: relative;
+      padding-bottom: 56.25%;
     }
+    .bossWrap-m__cont5 .swiper-button-next {
+      right: -5%;
+      width: 10vw;
+      height: 10vw;
+      color: #c7c7c7;
+      border-radius: 50%;
+      background-color: #444;
+      margin-top: -4vw;
+    }
+
+    .bossWrap-m__cont5 .swiper-button-prev {
+      left: -5%;
+      width: 10vw;
+      height: 10vw;
+      color: #c7c7c7;
+      border-radius: 50%;
+      background-color: #444;
+      margin-top: -4vw;
+    }
+    .bossWrap-m__cont5 .swiper-button-prev:after,
+    .bossWrap-m__cont5 .swiper-button-next:after {
+      font-size: 3vw;
+    }
+    
+    .bossWrap-m__cont5 iframe {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+    }
+    
 
     .bossWrap-m__cont5 .img2 {
       position: absolute;
@@ -949,6 +1021,7 @@
       bottom: -10%;
       transform: translateX(-15%);
       width: 15vw;
+      z-index: 10;
     }
 
     .bossWrap-m__cont5 .img3 {
@@ -957,15 +1030,9 @@
       bottom: -10%;
       transform: translateX(50%);
       width: 10vw;
+      z-index: 10;
     }
 
-    .bossWrap-m__cont5 iframe {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      left: 0;
-      top: 0;
-    }
 
     .bossWrap-m__cont6 {
       background-color: #eee;
@@ -1055,8 +1122,8 @@
     <div class="bossWrap__top pc-boss">
       <img src="https://cdn.imweb.me/upload/S202103307cf83b054c1d4/d7c40be555eb5.png" alt="" class="logo">
       <div class="cont">
-        <img src="https://cdn.imweb.me/upload/S202103307cf83b054c1d4/efaa7ef155c70.png" alt="" class="img wow bounceInRight" data-wow-duration=".8s" data-wow-delay="0.3s">
-        <img src="https://cdn.imweb.me/upload/S202103307cf83b054c1d4/fa8fe6acb97f3.png" alt="" class="mainMove wow flipInY">        
+        <img src="https://cdn.imweb.me/upload/S202103307cf83b054c1d4/efaa7ef155c70.png" alt="" class="img">
+        <img src="https://cdn.imweb.me/upload/S202103307cf83b054c1d4/fa8fe6acb97f3.png" alt="" class="mainMove blink">        
       </div>
     </div>
 
@@ -1071,8 +1138,10 @@
     <div class="bossWrap__cont2 pc-boss">
       <div class="cont">
         <img src="https://cdn.imweb.me/upload/S202103307cf83b054c1d4/daa210f8cfd31.png" alt="" class="img1">
-        <img src="https://cdn.imweb.me/upload/S202103307cf83b054c1d4/9aff4f2d7d0e8.png" alt="" class="img2 wow bounceInUp" data-wow-duration="1s">
-        <img src="https://cdn.imweb.me/upload/S202103307cf83b054c1d4/d593e52dcf885.png" alt="" class="img3 wow bounceIn" data-wow-duration="1s" data-wow-delay="1s">
+        <div class="blink">
+          <img src="https://cdn.imweb.me/upload/S202103307cf83b054c1d4/9aff4f2d7d0e8.png" alt="" class="img2">
+          <img src="https://cdn.imweb.me/upload/S202103307cf83b054c1d4/d593e52dcf885.png" alt="" class="img3">
+        </div>
       </div>
     </div>
 
@@ -1086,9 +1155,9 @@
 
     <div class="bossWrap__cont4 pc-boss">
       <div class="cont">
-        <img src="https://cdn.imweb.me/upload/S202103307cf83b054c1d4/bc44ae6766735.png" alt="" class="txt txt1 wow bounceInUp" data-wow-duration="1s">
-        <img src="https://cdn.imweb.me/upload/S202103307cf83b054c1d4/5b3ce0e73e791.png" alt="" class="txt txt2 wow bounceInRight" data-wow-duration="1s" data-wow-delay="0.5s">
-        <img src="https://cdn.imweb.me/upload/S202103307cf83b054c1d4/d905a9667c661.png" alt="" class="txt txt3 wow bounceInLeft" data-wow-duration="1s" data-wow-delay="0.7s">
+        <img src="https://cdn.imweb.me/upload/S202103307cf83b054c1d4/bc44ae6766735.png" alt="" class="txt txt1">
+        <img src="https://cdn.imweb.me/upload/S202103307cf83b054c1d4/5b3ce0e73e791.png" alt="" class="txt txt2">
+        <img src="https://cdn.imweb.me/upload/S202103307cf83b054c1d4/d905a9667c661.png" alt="" class="txt txt3 blink">
         <img src="https://cdn.imweb.me/upload/S202103307cf83b054c1d4/6c4ee03977d75.png" alt="" class="img1">        
         <img src="https://cdn.imweb.me/upload/S202103307cf83b054c1d4/515004d05110a.png" alt="" class="img2">
       </div>
@@ -1100,7 +1169,18 @@
         <div class="youtube">
           <img src="https://cdn.imweb.me/upload/S202103307cf83b054c1d4/7f3c2ae4a9ade.png" alt="" class="img2">
           <img src="https://cdn.imweb.me/upload/S202103307cf83b054c1d4/6d74adb460211.png" alt="" class="img3">
-          <iframe src="https://www.youtube.com/embed/6Es497dPsZI" title="카페계의 다이소! 다양한 메뉴라인과 홀+배달+포장 판매 최적화 시스템 &#39;카페보스&#39;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <div class="swiper youtubeSwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <iframe src="https://www.youtube.com/embed/CUMap5bz_Ck" title="[CAFE BOSS]은퇴 후 노후 자금? 돈이 되는 카페, 카페의 신세계" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </div>
+              <div class="swiper-slide">
+                <iframe src="https://www.youtube.com/embed/LS5mJYfiNGw" title="[CAFE BOSS]준비가 잘된 카페는 돈이 된다!  MZ카페 매니저 매출 좋은 카페 사장을 꿈꾼다" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </div>
+            </div>            
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
         </div>
       </div>
     </div>
@@ -1167,27 +1247,40 @@
   <div class="bossWrap-m">
     <div class="bossWrap-m__cont1">
       <img src="https://cdn.imweb.me/upload/S202103307cf83b054c1d4/6a63d758f9452.png" alt="" class="bg">      
-      <img alt="" src="https://cdn.imweb.me/upload/S202103307cf83b054c1d4/337d81d560698.png" class="left wow flipInY">
-      <img alt="" src="https://cdn.imweb.me/upload/S202103307cf83b054c1d4/52306f65e0337.png" class="right wow bounceInRight" data-wow-duration=".8s" data-wow-delay="0.3s">
+      <img alt="" src="https://cdn.imweb.me/upload/S202103307cf83b054c1d4/337d81d560698.png" class="left blink">
+      <img alt="" src="https://cdn.imweb.me/upload/S202103307cf83b054c1d4/52306f65e0337.png" class="right">
     </div>
     <div class="bossWrap-m__cont2">
       <img src="https://cdn.imweb.me/upload/S202103307cf83b054c1d4/aeb9b6f6b35be.png" alt="" class="bg">      
     </div>
     <div class="bossWrap-m__cont3">
       <img src="https://cdn.imweb.me/upload/S202103307cf83b054c1d4/525a6974cb6a7.png" alt="" class="bg">
-      <img src="https://cdn.imweb.me/upload/S202103307cf83b054c1d4/9aff4f2d7d0e8.png" alt="" class="img2 wow bounceInUp" data-wow-duration="1s">
-      <img src="https://cdn.imweb.me/upload/S202103307cf83b054c1d4/d593e52dcf885.png" alt="" class="img3 wow bounceIn" data-wow-duration="1s" data-wow-delay="1s">
+      <div class="blink">
+        <img src="https://cdn.imweb.me/upload/S202103307cf83b054c1d4/9aff4f2d7d0e8.png" alt="" class="img2">
+        <img src="https://cdn.imweb.me/upload/S202103307cf83b054c1d4/d593e52dcf885.png" alt="" class="img3">
+      </div>
     </div>
     <div class="bossWrap-m__cont4">
       <img src="https://cdn.imweb.me/upload/S202103307cf83b054c1d4/bc7d3a6632cc4.png" alt="" class="bg">
     </div>
     <div class="bossWrap-m__cont5">
       <img src="https://cdn.imweb.me/upload/S202103307cf83b054c1d4/b2712dfc2af53.png" alt="" class="bg">
-      <img src="https://cdn.imweb.me/upload/S202103307cf83b054c1d4/7905fef0213d2.png" alt="" class="txt txt1 wow bounceInLeft" data-wow-duration="1s">
-      <img src="https://cdn.imweb.me/upload/S202103307cf83b054c1d4/1a904121f0fd9.png" alt="" class="txt txt2 wow bounceInRight" data-wow-duration="1s" data-wow-delay="0.2s">
-      <img src="https://cdn.imweb.me/upload/S202103307cf83b054c1d4/690178a9a2519.png" alt="" class="txt txt3 wow flipInY" data-wow-duration="1s" data-wow-delay="1s">
+      <img src="https://cdn.imweb.me/upload/S202103307cf83b054c1d4/7905fef0213d2.png" alt="" class="txt txt1">
+      <img src="https://cdn.imweb.me/upload/S202103307cf83b054c1d4/1a904121f0fd9.png" alt="" class="txt txt2">
+      <img src="https://cdn.imweb.me/upload/S202103307cf83b054c1d4/690178a9a2519.png" alt="" class="txt txt3 blink">
       <div class="youtube">
-        <iframe src="https://www.youtube.com/embed/6Es497dPsZI" title="카페계의 다이소! 다양한 메뉴라인과 홀+배달+포장 판매 최적화 시스템 &#39;카페보스&#39;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div class="swiper youtubeSwiper2">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <iframe src="https://www.youtube.com/embed/CUMap5bz_Ck" title="[CAFE BOSS]은퇴 후 노후 자금? 돈이 되는 카페, 카페의 신세계" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="swiper-slide">
+              <iframe src="https://www.youtube.com/embed/LS5mJYfiNGw" title="[CAFE BOSS]준비가 잘된 카페는 돈이 된다!  MZ카페 매니저 매출 좋은 카페 사장을 꿈꾼다" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+          </div>            
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
         <img src="https://cdn.imweb.me/upload/S202103307cf83b054c1d4/7f3c2ae4a9ade.png" alt="" class="img2">
         <img src="https://cdn.imweb.me/upload/S202103307cf83b054c1d4/6d74adb460211.png" alt="" class="img3">
       </div>
@@ -1263,7 +1356,7 @@
             </div>
           </form>
           <div class="form text-center">
-            <a href="javascript:;" class="btn btn-primary _input_form_submit blink" onclick="SITE_FORM.confirmInputForm('w2023120450514e69634c5','N');">
+            <a href="javascript:;" class="btn btn-primary _input_form_submit" onclick="SITE_FORM.confirmInputForm('w2023120450514e69634c5','N');">
               문의하기</a>
           </div>
         </div>
@@ -1349,6 +1442,21 @@
       observer: true,
       observeParents: true,
     });
+    var swiper = new Swiper(".youtubeSwiper", {
+      spaceBetween: 0,
+      slidesPerView: 1,
+      // centeredSlides: true,
+      loop: true,
+      autoplay: {
+        delay: 4000,
+      },
+      navigation: {
+        nextEl: ".bossWrap__cont5 .swiper-button-next",
+        prevEl: ".bossWrap__cont5 .swiper-button-prev",
+      },
+      observer: true,
+      observeParents: true,
+    });
 
     var swiper = new Swiper(".mySwiperMo", {
       spaceBetween: 0,
@@ -1370,6 +1478,22 @@
       loop: true,
       autoplay: {
         delay: 4000,
+      },
+      observer: true,
+      observeParents: true,
+    });
+
+    var swiper = new Swiper(".youtubeSwiper2", {
+      spaceBetween: 0,
+      slidesPerView: 'auto',
+      centeredSlides: true,
+      loop: true,
+      autoplay: {
+        delay: 4000,
+      },
+      navigation: {
+        nextEl: ".bossWrap-m__cont5 .swiper-button-next",
+        prevEl: ".bossWrap-m__cont5 .swiper-button-prev",
       },
       observer: true,
       observeParents: true,
@@ -1415,7 +1539,7 @@
             $(this).siblings('label').show();  // 형제 label을 표시
           }
         });
-      }      
+      }
     });
 
     function addImages() {
@@ -1428,8 +1552,9 @@
       $('#w2023120450514e69634c5').append(backImage);
     }
     function addImagesMo() {
-      var imageSrc1 = 'https://cdn.imweb.me/upload/S202103307cf83b054c1d4/fdb86429f275d.png';
-      var frontImage = '<a href="tel:1670-9405" class="bannerImg1 blink"><img src="' + imageSrc1 + '" alt="Front Image"></a>';
+      var imageSrc1 = 'https://cdn.imweb.me/upload/S202103307cf83b054c1d4/a89783bb19ba0.png';
+      var imageSrc2 = 'https://cdn.imweb.me/upload/S202103307cf83b054c1d4/a21c15b9fa897.png';
+      var frontImage = '<a href="tel:1670-9405" class="bannerImg1 mo"><img src="' + imageSrc1 + '" alt="Front Image"><img src="' + imageSrc2 + '" alt="Front Image" class="blink"></a>';
       $('#w2023120450514e69634c5').find('.bannerImg1, .bannerImg2').remove();
       $('#w2023120450514e69634c5').prepend(frontImage);
     }
